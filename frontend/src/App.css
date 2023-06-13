@@ -44,3 +44,17 @@
   align-items: center;
   background-color: aqua;
 }
+
+
+/* imported from PBV app.css */
+#basic-navbar-nav >.MenuNavRightEnd{
+
+  margin-left: auto;
+  right:10px;
+  /* width:100%; */
+  display: flex;
+  width:950px;
+  row-gap: 10px;
+  align-items:center;
+
+}
