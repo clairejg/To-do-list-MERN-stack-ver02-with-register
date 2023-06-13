@@ -2,16 +2,15 @@
 import ToDo from "./components/ToDo";
 import {useEffect, useState} from "react";
 import {getAllToDo, addToDo, updateToDo, deleteToDo} from "./utils/HandleApi";
-// import NavBar from "./components/NavBar";
-import './App2.css'
-// import './index.css'
+import './todoMain.css'
+
 //
 //지금까지 우리가 리액트 컴포넌트를 만들 때는, 동적인 부분이 하나도 없었습니다. 값이 바뀌는 일이 없었죠. 
 //이번에는 컴포넌트에서 보여줘야 하는 내용이 사용자 인터랙션에 따라 바뀌어야 할 때 어떻게 구현할 수 있는지에 대하여 알아보겠습니다.
 //컴포넌트에서 동적인 값을 상태(state)라고 부릅니다. 리액트에 useState 라는 함수가 있는데요,
 // 이것을 사용하면 컴포넌트에서 상태를 관리 할 수 있습니다.
 
-function App() {
+function AppMain() {
 
   const [toDo, setToDo] = useState([]) // ToDo's state.
   // syntax of useState. when we call useState([]), the 'array' is going to be return.
@@ -51,22 +50,17 @@ function App() {
 
   }
 
-  // const textUserName;
-
     return (
     <div className="App">
   
     <div className="containerToDo">
         <div className="titleDiv">
-
           <h1> To-Do Application 
           </h1>
                <p className="userNameDiv">Username:<input className='userNameInput'
                 type="text"
                 placeholder="type your username here"  /></p> 
         </div>
-
-          
 
 
         <div className="top">
@@ -145,7 +139,7 @@ First you have 'e' which is short for event. To understand what it does change o
   );
 }
 
-export default App;
+export default AppMain;
 
 
 

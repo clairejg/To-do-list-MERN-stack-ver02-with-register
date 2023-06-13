@@ -12,9 +12,10 @@ const router = Router()
 //4.res.json() :Sends JSON response.
 //5.Routing refers to the definition of application endpoints (URIs) and how they respond to client requests. For an introduction to routing,
 
+//router.get == routing handlder funtion.
 //3.when a GET request is made to the homepage(/), respond with: res.json()
 router.get('/', getToDoSchemaMongo)
-//router.get('/',getToDoSchemaMongo): when browser has accessed to '/' home, router gets getToDoSchemaMongo from server.
+//router.get('/',getToDoSchemaMongo): when browser has accessed to url '/' home, router gets 'getToDoSchemaMongo' from server.
 //getToDoSchemaMongo is exported from ToDoController.js
 //getToDoSchemaMongo is the schema of MongoDB
 //router imported getToDoSchemaMongo from ToDoController.js
