@@ -36,23 +36,36 @@ module.exports.saveToDo= async(req,res) =>{
     // we use {}, to save object's data into variable.
     // const{varName}= object.data
     //req.body == req. body object allows you to access data in a string or JSON object from the client side. 
+//The req object contains the request, that is, the thing the client sends to your server.
 
     // we are going to send this text to the route
+    //1.use create()api: syntax: Mongoose' schema class.create(data)
+    // to insert 'data' into mongoose document.
+    
     ToDoModel
         .create({text})
         //Object.create(): method creates a new object,
         //syntax: MongoDBSchemaName.create()
+        //create(7.testing)
+        //console.log(text)== 7.testing
 
         .then((data)=>{
             //then(callBackFunct(that takes 'data' param))
             console.log("Added Successfully !! ");
             console.log("Here is the data that has been added to ToDoModel Schema ");
             console.log(data);
+            //   console.log(data);==
+            // data: 
+            // text: "7.testing"
+            //  __v: 0
+            //  _id: "64895d47c6143e990f056404"
+            
             res.send(data)
 
             //sending data to our database
             //send the {text} to the route at 'ToDoRoute.js' as 'router.post('/save', saveToDo)
             // router.post('/save', saveTodo): what does this do? 
+            //
         })
 }
 

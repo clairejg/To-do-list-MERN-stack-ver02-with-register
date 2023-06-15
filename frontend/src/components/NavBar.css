@@ -1,19 +1,22 @@
 
 .Navbar{
-    color: skyblue;
-    background-color: skyblue;
+    /* color: skyblue; */
+    background-color: pink;
+    overflow: hidden;
    }
    
    .navbar-collapse{
       
        display: inline-flex;
        position:sticky;
+       
     
        font-size:25px;
        border-radius: 80px;
        vertical-align: middle;
        top:0px;
        height: 60px;
+       /* background-color: aqua; */
      
      }
      

@@ -12,7 +12,15 @@ import './todoMain.css'
 
 function AppMain() {
 
+  const [text,setText] = useState("")
+  //1. const[toDo,setToDo]= 할일(기본값 문자열)
+  // 1.line 71:         onChange={(e) => setText(e.target.value)}
+  // By using 'onChange function', When there is an 'event e'
+  // The program set the value of 'text' with 'user input Value == e.target.value'
+  //by using 'setText function'
+
   const [toDo, setToDo] = useState([]) // ToDo's state.
+  // 1. const[toDoList,setToDoList]= 할일(기본값 배열)
   // syntax of useState. when we call useState([]), the 'array' is going to be return.
   // const[currentState,SetterFunctionOfTheCurrentState]
   // useState 를 사용 할 때에는 상태의 기본값을 파라미터로 넣어서 호출해줍니다. i.e. useState(0)
@@ -20,12 +28,6 @@ function AppMain() {
   // setToDo's job: When 'useEffect()' updates, ToDo, there will be new addition of [] which is a 'empty erray'
   // 
     //i.e. useState([]): Empty Array.
-
-  const [text,setText] = useState("")
-  // line 71:         onChange={(e) => setText(e.target.value)}
-  // By using 'onChange function', When there is an 'event e'
-  // The program set the value of 'text' with 'user input Value == e.target.value'
-  //by using 'setText function'
 
   const [isUpdating, setIsUpdating] = useState(false)
   //default useState is false

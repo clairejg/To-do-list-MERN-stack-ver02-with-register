@@ -1,5 +1,12 @@
 import axios from 'axios'
-// Axios는 node.js와 브라우저를 위한 Promise 기반 HTTP 클라이언트 입니다. 그것은 동형 입니다(동일한 코드베이스로 브라우저와 node.js에서 실행할 수 있습니다). 서버 사이드에서는 네이티브 node.js의 http 모듈을 사용하고,
+//1.Axios is a promise-based HTTP library that lets developers make requests to either their own or a third-party server 
+//to fetch data. 
+//2. Axios is a popular promise-based HTTP client for the browser and Node.js,
+// On the server-side (Node.js), it uses the native Node.js HTTP module, while on the client-side (browser) it uses XMLHttpRequests.
+//3. what is promis-based HTTP?: 
+// Axios는 node.js와 브라우저를 위한 Promise 기반 HTTP 클라이언트 입니다. 
+//그것은 동형 입니다(동일한 코드베이스로 브라우저와 node.js에서 실행할 수 있습니다).
+// 서버 사이드에서는 네이티브 node.js의 http 모듈을 사용하고,
 //  클라이언트(브라우저)에서는 XMLHttpRequests를 사용합니다.
 
 
@@ -17,12 +24,14 @@ const getAllToDo = (setToDo)=>{
 
         })
 }
+//export getAllToDo, 
+// use i at todoMain.js 
 
 const addToDo = (text, setText, setToDo) => {
     //param: 
     //1.'text' which to be added by user as ToDo item, then we have to save the 'text' into our DB
-    //2. setText: coming from App.js useState()// setToDo's job: When 'useEffect()' updates, ToDo, there will be new addition of [],'empty erray'
-    //3. setToDo: coming from App.js useState()
+    //2. setText: coming from todoMain.js useState()// setToDo's job: When 'useEffect()' updates, ToDo, there will be new addition of [],'empty erray'
+    //3. setToDo: coming from todoMain.js useState()
       function getTimeStamp() {
             var now = new Date();
             return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'

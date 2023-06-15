@@ -12,6 +12,9 @@ const router = Router()
 //4.res.json() :Sends JSON response.
 //5.Routing refers to the definition of application endpoints (URIs) and how they respond to client requests. For an introduction to routing,
 
+
+//syntax: router.httpMethod(path, callback )
+
 //router.get == routing handlder funtion.
 //3.when a GET request is made to the homepage(/), respond with: res.json()
 router.get('/', getToDoSchemaMongo)
@@ -21,8 +24,10 @@ router.get('/', getToDoSchemaMongo)
 //router imported getToDoSchemaMongo from ToDoController.js
 
 router.post('/save', saveToDo)
+//save {text} from 'ToDoController'  to the route
 router.post('/update', updateToDo)
 router.post('/delete', deleteToDo)
-
+//The HTTP POST method sends data to the server. 
+//when user url is /delete, the route executes the function 'deleteToDo'
 module.exports = router;
 //making modlue with router.
